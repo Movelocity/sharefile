@@ -1,0 +1,98 @@
+<html>
+<head>
+  <style>
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header, footer {
+    width: 100%;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+.carousel {
+    flex: 0 0 70%;
+    position: relative;
+}
+
+.carousel-item {
+    display: none;
+    /* 样式和动画 */
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    /* 样式 */
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.info-panel {
+    flex: 1;
+    padding: 1em;
+    background-color: #f4f4f4;
+}
+
+.info-panel h2 {
+    margin-top: 0;
+}
+
+/* 响应式布局等其他样式 */
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>头部内容</header>
+    <div class="main-content">
+      <section class="carousel">
+        <!-- 轮播图项目 -->
+        <div class="carousel-item active">图片1</div>
+        <div class="carousel-item">图片2</div>
+        <div class="carousel-item">图片3</div>
+        <!-- 轮播图导航 -->
+        <a class="carousel-control prev">‹</a>
+        <a class="carousel-control next">›</a>
+      </section>
+      <aside class="info-panel">
+        <!-- 信息面板内容 -->
+        <h2>标题</h2>
+        <p>一些描述性文字。</p>
+        <ul>
+          <li>列表项1</li>
+          <li>列表项2</li>
+          <li>列表项3</li>
+        </ul>
+      </aside>
+    </div>
+    <footer>底部内容</footer>
+  </div>
+</body>
+
+</html>
